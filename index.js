@@ -2,22 +2,36 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 /**
-Mini Challenge:
-Move the `header` element from Page into 
-its own component called "Header"
+Challenge: 
+
+- Add an `ul` inside the Header's `nav` and create
+  the following `li`s: "Pricing", "About", & "Contact"
 */
 
 function Header() {
     return (
         <header>
-            <nav>
-                <img src="./react-logo.png" width="40px" />
+            <nav className = "navbar">
+                <img src="./react-logo.png" className="nav-logo" />
+                <ul className = "list-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
 }
 
-function Reasons() {
+function Footer() {
+    return (
+        <footer className = "footer">
+            <small>© 2022 Anikwenze development. All rights reserved.</small>
+        </footer>
+    )
+}
+
+function Main() {
     return (
         <div>
             <h1>Reasons I'm excited to learn React</h1>
@@ -30,19 +44,11 @@ function Reasons() {
     )
 }
 
-function Footer () {
-    return (
-        <footer>
-                <small>© 2022 Anikwenze development. All rights reserved.</small>
-        </footer>
-    )
-}
-
 function Page() {
     return (
         <div>
             <Header />
-            <Reasons />
+            <Main />
             <Footer />
         </div>
     )
